@@ -5,6 +5,7 @@ pip install tweetkit
 ```
 (Source code of [tweetkit](https://github.com/ysenarath/tweetkit))
 
+---
 ## Full archive search
 
 1. Sample code: full_archive_search_sample_code.ipynb
@@ -30,7 +31,8 @@ pip install tweetkit
 https://developer.twitter.com/en/docs/labs/annotations
 
    Extract the corresponding entity tokens from each tweet to investigate whether the annotations provided by Twitter is accurate. 
-
+   
+---
 ## Stream search:
 1. Sample code: filtered_stream_sample_code.ipynb
    You need to input the ***bearer token***
