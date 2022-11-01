@@ -33,11 +33,13 @@ https://developer.twitter.com/en/docs/labs/annotations
 
 ## Stream search:
 1. Sample code: filtered_stream_sample_code.ipynb
+   You need to input the ***bearer token***
 2. Learn the ***rate limit*** and parameters [here](https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/api-reference/post-tweets-search-stream-rules).
 2. Learn how to build rules [here](https://developer.twitter.com/en/docs/twitter-api/tweets/filtered-stream/integrate/build-a-rule). The rule is similar to the query in full_archive_search.
 
 ### Tasks
 
-1. Using the same rules and query to see whether "full archive search" and "filtered stream" return the same content.
+1. Using the same rules and query to see whether "full archive search" and "filtered stream" return the same number of tweets.
+2. Test the stability of the script. (Can it run for 12hr/24hr?)
 
 
