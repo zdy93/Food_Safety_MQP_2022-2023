@@ -44,4 +44,4 @@ https://developer.twitter.com/en/docs/labs/annotations
 1. Using the same rules and query to see whether "full archive search" and "filtered stream" return the same number of tweets.
 2. Test the stability of the script. (Can it run for 12hr/24hr?)
 
-
+## :point_right: Filter out tweets from News agencies (or government):newspaper:
