@@ -3,7 +3,7 @@ import torch
 from torch.nn import CrossEntropyLoss, MSELoss
 from transformers import RobertaForTokenClassification, RobertaForSequenceClassification
 from transformers.modeling_outputs import TokenClassifierOutput, SequenceClassifierOutput
-from TorchCRF import CRF
+from torchcrf import CRF
 from torch.nn.utils.rnn import pad_sequence
 
 try:

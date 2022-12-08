@@ -8,7 +8,7 @@ Python version: 3.8.13
 
 Run the code below to install modules.
 ```linux
-pip install -r requirements.txt
+
 ```
 If TorchCRF cannot be installed by the command above. Use the command below to install modules.
 ```linux

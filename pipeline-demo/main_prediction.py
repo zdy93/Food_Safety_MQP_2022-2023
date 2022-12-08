@@ -24,6 +24,7 @@ import glob
 import os
 import model_weighted_roberta
 import utils
+from torchcrf import CRF
 
 
 def simple_tokenize_no_label(orig_tokens, tokenizer, max_seq_length):
@@ -172,18 +173,19 @@ def load_model(model_type, model_path, config):
     
 ### Main
 def mainPredict():
-    input_dir = "tmp/"
-
-    path = os.path.join(input_dir, 'tweets_*.txt_chunk-*.csv')
+    #input_dir = r"C:\Users\12017\OneDrive\Documents\MQP_ML\tweet-fid-demo\pipeline-demo\tmp"
+    #path = os.path.join(input_dir, 'tweets_*.txt_chunk-*.csv')
+    path = os.path.join(r'C:\Users\12017\OneDrive\Documents\MQP_ML\tweet-fid-demo\pipeline-demo\tmp\prep_tweets.csv')
     file_list = glob.glob(path)
-    print(file_list)
+    #file_list = pd.read_csv('prep_tweets.csv')
+    #print(file_list)
 
     fcount = 0
 
     for file_name in file_list:
       bert_model = "roberta-base"
       model_type = "bertweet-multi-crf"
-      model_dir = "/home/dzhang5/scratch/mqp/model_dir"
+      model_dir = r"C:\Users\12017\OneDrive\Documents\MQP_ML\pytorch_model.bin"
 
       task_type = 'entity_detection'
       n_epochs = 10
@@ -255,7 +257,11 @@ def mainPredict():
       us_data['sentence_prediction_prob'] = test_s_p_pred
       pos_count = us_data['sentence_prediction'].sum()
 
-      us_data.to_csv("output/predicted_tweets_" + str(fcount) + ".csv", index=False)
+
+      us_data = us_data.loc[us_data['sentence_prediction'] == 1]
+      print(us_data)
+
+      us_data.to_csv("predicted_tweets_" + str(fcount) + ".csv", index=False)
       fcount += 1
 
       print(f"Total Sentences: {us_data.shape[0]}, Predicted Related Sentences: {pos_count}")
