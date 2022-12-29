@@ -34,6 +34,6 @@ It will send us emails when the data collection/prediction is done or it occurs 
 
 
 # Tasks
-**I will start the data collection for tweets with geo on the server. All the collected tweets will be saved into folder `geo_tweets`**
+**I will start the data collection for tweets with geo on the server. All the collected tweets will be saved into folder `home/rhu/geo_tweets`**
 1. Complete the database part in 'main_prediction.py'
 2. Run 'python main_prediction.py' on the server. (For now, it will take the files in geo_tweets_test as input)
