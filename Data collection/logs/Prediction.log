@@ -1,0 +1,6 @@
+2022-12-29 21:53:01,747 Prediction time is 194.79847359657288s
+2022-12-29 21:53:01,754 Total Sentences: 472, Predicted Related Sentences: 9
+2022-12-29 21:53:02,325 collected_queue_2018-01-03 00:00:00.pt-batch_1 Prediction Finished
+2022-12-29 21:55:48,281 Prediction time is 156.2939155101776s
+2022-12-29 21:55:48,287 Total Sentences: 393, Predicted Related Sentences: 10
+2022-12-29 21:55:48,864 collected_queue_2018-01-03 00:00:00.pt-batch_2 Prediction Finished
